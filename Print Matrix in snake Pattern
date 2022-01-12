@@ -1,0 +1,20 @@
+class Solution
+{
+    //Function to return list of integers visited in snake pattern in matrix.
+    static ArrayList<Integer> snakePattern(int matrix[][])
+    {
+        // code here 
+        ArrayList<Integer> arr = new ArrayList<Integer>();
+        int i,j;
+        for(i=0;i<matrix.length;i++){
+            if(i%2==0){
+                for(j=0;j<matrix.length;j++)
+                    arr.add(matrix[i][j]); 
+            }else{
+                for(j=matrix[i].length-1;j>=0;j--)
+                    arr.add(matrix[i][j]);    
+                }
+            }
+            return arr;
+        }
+    }
