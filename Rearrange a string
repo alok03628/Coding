@@ -1,0 +1,23 @@
+class Solution
+{
+    public String arrangeString(String s)
+        {
+            //code here.
+            int i,sum=0;
+            String alpha = "";
+            for(i=0;i<s.length();i++){
+                if((int)s.charAt(i) >= 48 && (int)s.charAt(i) <=57){
+                    sum += (int)s.charAt(i)-48;
+                }else{
+                    alpha += s.charAt(i);
+                }
+            }
+            char ar[] = alpha.toCharArray();
+            Arrays.sort(ar);
+            String st = new String(ar);
+            String str = Integer.toString(sum);
+            return (st+str);
+            
+            
+        }
+}
